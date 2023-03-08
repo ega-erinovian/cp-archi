@@ -345,6 +345,20 @@ h6,
     0% {left: 0; } 50% { left : 85px; } 100% { left: 0; }
 }
 
+/* Features */
+.content-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ec1c2a52;
+}
+
 
 /*** Service ***/
 .service-item {
@@ -352,6 +366,7 @@ h6,
     height: 300px;
     padding: 0 30px;
     transition: .5s;
+    background-color: #fff7f8;
 }
 
 .service-item .service-icon {
@@ -423,9 +438,93 @@ h6,
     box-shadow: 0 0 30px #DDDDDD;
 }
 
+/* .container {width: 980px !important;} */
+
+/*** Sertifikat ***/
+.main2 {
+    background: rgba(0, 0, 0, 0.915);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.main img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+}
+.main .close {
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 40px;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  border: none;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  color: var(--primary);
+}
+
+.btn_main {
+  text-align: center;
+}
+
+.airimage {
+  padding: 20px 30px;
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+  transition: .25s;
+  -webkit-transition: .25s;
+  -moz-transition: .25s;
+  -ms-transition: .25s;
+  -o-transition: .25s;
+  border-radius: .25rem;
+  -webkit-border-radius: .25rem;
+  -moz-border-radius: .25rem;
+  -ms-border-radius: .25rem;
+  -o-border-radius: .25rem;
+}
+
+.airimage:hover {
+  background-color: #ff3744;
+}
+
+@media (max-width: 576px) {
+    .main img {
+        min-width: 100vw;
+        height: 100%;
+    }
+}
+
 
 /*** Team ***/
-.team-item {
+/* .team-item {
     transition: .5s;
 }
 
@@ -488,7 +587,7 @@ h6,
 .team-item:hover .team-img img,
 .blog-item:hover .blog-img img {
     transform: scale(1.15);
-}
+} */
 
 
 /*** Miscellaneous ***/
