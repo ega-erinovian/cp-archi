@@ -130,6 +130,7 @@ h6,
 
 /*** Navbar ***/
 .navbar .navbar-brand img{
+    width: 196px;
     transition: all ease-in-out .2s;
     -webkit-transition: all ease-in-out .2s;
     -moz-transition: all ease-in-out .2s;
@@ -537,7 +538,7 @@ h6,
     -o-border-radius: .25rem;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 900px) {
     .main img {
         min-width: 100vw;
         height: 100%;
