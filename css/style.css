@@ -393,6 +393,50 @@ h6,
     0% {left: 0; } 50% { left : 85px; } 100% { left: 0; }
 }
 
+/*** Bidang ***/
+.bidang-container .arsitektur-container,
+.bidang-container .transportasi-container{
+    height: 600px;
+    width: 632px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bidang-container .arsitektur-container{
+    background-image: url(../img/bidang/bidang-1.webp);
+}
+
+.bidang-container .transportasi-container{
+    background-image: url(../img/bidang/bidang-2.webp);
+}
+
+.bidang-container .arsitektur-container .bidang-content,
+.bidang-container .transportasi-container .bidang-content{
+    background-color: #6e0d13ce;
+    filter: opacity(1);
+    -webkit-filter: opacity(1);
+    padding: 1rem;
+}
+
+.bidang-container .arsitektur-container h1,
+.bidang-container .transportasi-container h1{
+    transition: all .5s cubic-bezier(0.9,0.2,0.05,0.9);
+    -webkit-transition: all .5s cubic-bezier(0.9,0.2,0.05,0.9);
+    -moz-transition: all .5s cubic-bezier(0.9,0.2,0.05,0.9);
+    -ms-transition: all .5s cubic-bezier(0.9,0.2,0.05,0.9);
+    -o-transition: all .5s cubic-bezier(0.9,0.2,0.05,0.9);
+}
+
+.bidang-container .arsitektur-container:hover h1,
+.bidang-container .transportasi-container:hover h1{
+    transform: skew(-15deg);
+    -webkit-transform: skew(-15deg);
+    -moz-transform: skew(-15deg);
+    -ms-transform: skew(-15deg);
+    -o-transform: skew(-15deg);
+}
+
 /*** Service ***/
 .service-item {
     position: relative;
