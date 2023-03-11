@@ -116,7 +116,6 @@ h6,
     font-weight: 600 !important;
 }
 
-
 /*** Button ***/
 .btn {
     font-family: 'Nunito', sans-serif;
@@ -480,7 +479,11 @@ h6,
 }
 
 /*** Portfolio ***/
-.parent-container img{
+.portfolio-carousel{
+    max-width: 70%;
+}
+.portfolio-item img{
+    width: 100%;
     border: none;
     border-radius:7px;
     -webkit-border-radius:7px;
@@ -492,13 +495,54 @@ h6,
     -moz-transition: all .25s;
     -ms-transition: all .25s;
     -o-transition: all .25s;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .parent-container img:hover{
     cursor: zoom-in;
-    filter: brightness(1.2) contrast(.1);
-    -webkit-filter: brightness(1.2) contrast(.8);
+    filter: drop-shadow(7px 7px .5rem rgba(0, 0, 0, .4)) ;
+    -webkit-filter: drop-shadow(7px 7px .5rem rgba(0, 0, 0, .4)) ;
+}
+
+.portfolio-item{
+    width: auto;
+    height: 600px;
+}
+
+.portfolio-item img{
+    margin-top: 3rem;
+    height: 80% !important;
+    width: auto;
+    object-fit: contain !important;
+}
+
+.portfolio-carousel .carousel-control-prev-icon,
+.portfolio-carousel .carousel-control-next-icon{
+    background-color: rgba(0, 0, 0, .1);
+    width: 50px;
+    height: 50px;
+    border-radius: .25rem;
+    -webkit-border-radius: .25rem;
+    -moz-border-radius: .25rem;
+    -ms-border-radius: .25rem;
+    -o-border-radius: .25rem;
+}
+
+@media (max-width: 900px) {
+    .portfolio-carousel{
+        max-width: 100%;
+    }
+    .portfolio-item{
+        width: auto;
+        height: 300px;
+    }
+    .portfolio-item img{
+        margin-top: 1.5rem;
+    }
+    .portfolio-carousel .carousel-control-prev-icon,
+    .portfolio-carousel .carousel-control-next-icon{
+        background-color: rgba(0, 0, 0, .1);
+    }
 }
 
 /* .container {width: 980px !important;} */
@@ -511,14 +555,6 @@ h6,
         z-index: 1;
     }
 }
-
-/* .tombol-wa {
-    position: fixed;
-    display: none;
-    right: 2rem;
-    bottom: 2rem;
-    z-index: 99;
-} */
 
 .button {
     position: fixed;
@@ -535,10 +571,13 @@ h6,
     align-items: center;
     overflow:hidden;
     width: auto;
-    max-width: 50px; /** I'm animating max-width because width needs to be auto, and auto can't be animated **/
-    -webkit-transition: max-width 0.5s;
-    transition: max-width 0.5s;
-  }
+    max-width: 50px;
+    transition: max-width .5s cubic-bezier(0.9,0.2,0.05,0.9);
+    -webkit-transition: max-width .5s cubic-bezier(0.9,0.2,0.05,0.9);
+    -moz-transition: max-width .5s cubic-bezier(0.9,0.2,0.05,0.9);
+    -ms-transition: max-width .5s cubic-bezier(0.9,0.2,0.05,0.9);
+    -o-transition: max-width .5s cubic-bezier(0.9,0.2,0.05,0.9);
+}
   
   .button:hover {
     max-width: 500px;
