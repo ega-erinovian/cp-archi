@@ -93,29 +93,12 @@
         }
     });
 
-
-    // Vendor carousel
-    $('.vendor-carousel').owlCarousel({
-        loop: true,
-        margin: 45,
-        dots: false,
-        loop: true,
-        autoplay: true,
-        smartSpeed: 1000,
-        responsive: {
-            0:{
-                items:2
-            },
-            576:{
-                items:4
-            },
-            768:{
-                items:6
-            },
-            992:{
-                items:8
-            }
-        }
+    // Lightbox
+    $('.parent-container').magnificPopup({
+        delegate: 'a', // child items selector, by clicking on it popup will open
+        type: 'image',
+        gallery:{enabled:true}
+        // other options
     });
 
 
